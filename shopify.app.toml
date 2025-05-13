@@ -3,11 +3,12 @@
 client_id = "acba658132da60be2408850e95613111"
 name = "QuickWish"
 handle = "quickwish"
-application_url = "https://example.com/"
+application_url = "https://enquiries-elementary-decade-lift.trycloudflare.com"
 embedded = true
 
 [build]
 include_config_on_deploy = true
+automatically_update_urls_on_dev = true
 
 [webhooks]
 api_version = "2025-04"
@@ -25,7 +26,11 @@ api_version = "2025-04"
 scopes = "write_products"
 
 [auth]
-redirect_urls = [ "https://example.com/api/auth" ]
+redirect_urls = [
+  "https://enquiries-elementary-decade-lift.trycloudflare.com/auth/callback",
+  "https://enquiries-elementary-decade-lift.trycloudflare.com/auth/shopify/callback",
+  "https://enquiries-elementary-decade-lift.trycloudflare.com/api/auth/callback"
+]
 
 [pos]
 embedded = false
